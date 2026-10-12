@@ -13,6 +13,9 @@ version = "0.1.0"
 [[package]]
 name = "catena-languages"
 version = "0.1.0"
+dependencies = [
+ "catena-core",
+]
 
 [[package]]
 name = "catena-recognizer"
