@@ -1,14 +1,14 @@
-use languages::traits::transformation::Transformation as TransformationSpec;
+use crate::traits::Transformation;
 
 /// Entities that contribute to the manipulation of a language.
-pub struct Transformation<T: TransformationSpec> {
+pub struct Suite<T: Transformation> {
     completions: Vec<T::Completion>,
     formatter: T::Formatter,
     propagator: T::Propagator,
     suggestions: Vec<T::Suggestion>,
 }
 
-impl<T: TransformationSpec> Transformation<T> {
+impl<T: Transformation> Suite<T> {
     pub fn completions(&self) -> &[T::Completion] {
         &self.completions
     }

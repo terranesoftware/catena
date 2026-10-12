@@ -1,13 +1,13 @@
-use languages::traits::comprehension::Comprehension as ComprehensionSpec;
+use crate::traits::Comprehension;
 
 /// Entities that contribute to the understanding of a language.
-pub struct Comprehension<C: ComprehensionSpec> {
+pub struct Suite<C: Comprehension> {
     descriptions: Vec<C::Description>,
     diagnostics: Vec<C::Diagnostic>,
     highlights: Vec<C::Highlight>
 }
 
-impl<C: ComprehensionSpec> Comprehension<C> {
+impl<C: Comprehension> Suite<C> {
     pub fn descriptions(&self) -> &[C::Description] {
         &self.descriptions
     }

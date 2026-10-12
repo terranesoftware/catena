@@ -1,12 +1,12 @@
-use languages::traits::traversal::Traversal as TraversalSpec;
+use crate::traits::Traversal;
 
 /// Entities that contribute to the navigation of a language.
-pub struct Traversal<T: TraversalSpec> {
+pub struct Suite<T: Traversal> {
     grammar: T::Grammar,
     indexes: Vec<T::Index>
 }
 
-impl<T: TraversalSpec> Traversal<T> {
+impl<T: Traversal> Suite<T> {
     pub fn grammar(&self) -> &T::Grammar {
         &self.grammar
     }

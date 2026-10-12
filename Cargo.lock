@@ -5,10 +5,15 @@ version = 4
 [[package]]
 name = "catena"
 version = "0.1.0"
-dependencies = [
- "languages",
-]
 
 [[package]]
-name = "languages"
+name = "catena-core"
+version = "0.1.0"
+
+[[package]]
+name = "catena-languages"
+version = "0.1.0"
+
+[[package]]
+name = "catena-recognizer"
 version = "0.1.0"
