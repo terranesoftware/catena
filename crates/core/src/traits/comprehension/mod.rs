@@ -1,8 +1,11 @@
-pub mod description;
-pub mod diagnostic;
-pub mod highlight;
+mod description;
+pub use description::Description;
 
-use crate::traits::comprehension::{description::Description, diagnostic::Diagnostic, highlight::Highlight};
+mod diagnostic;
+pub use diagnostic::Diagnostic;
+
+mod highlight;
+pub use highlight::Highlight;
 
 pub trait Comprehension {
     type Description: Description;

@@ -1,7 +1,8 @@
-pub mod grammar;
-pub mod index;
+mod grammar;
+pub use grammar::Grammar;
 
-use crate::traits::traversal::{grammar::Grammar, index::Index};
+mod index;
+pub use index::Index;
 
 pub trait Traversal {
     type Grammar: Grammar;

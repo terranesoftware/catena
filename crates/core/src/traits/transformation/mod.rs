@@ -1,9 +1,14 @@
-pub mod completion;
-pub mod formatter;
-pub mod propagator;
-pub mod suggestion;
+mod completion;
+pub use completion::Completion;
 
-use crate::traits::transformation::{completion::Completion, formatter::Formatter, propagator::Propagator, suggestion::Suggestion};
+mod formatter;
+pub use formatter::Formatter;
+
+mod propagator;
+pub use propagator::Propagator;
+
+mod suggestion;
+pub use suggestion::Suggestion;
 
 pub trait Transformation {
     type Completion: Completion;
