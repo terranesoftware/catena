@@ -8,14 +8,17 @@ pub struct Suite<C: Comprehension> {
 }
 
 impl<C: Comprehension> Suite<C> {
+    /// Returns the a reference to the contained description entities.
     pub fn descriptions(&self) -> &[C::Description] {
         &self.descriptions
     }
 
+    /// Returns a reference to the contained diagnostic entities.
     pub fn diagnostics(&self) -> &[C::Diagnostic] {
         &self.diagnostics
     }
 
+    /// Returns a reference to the contained highlight entities.
     pub fn highlights(&self) -> &[C::Highlight] {
         &self.highlights
     }

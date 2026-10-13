@@ -12,14 +12,17 @@ pub struct Suite<L: Language> {
 }
 
 impl<L: Language> Suite<L> {
+    /// Returns a reference to the contained comprehension `Suite`.
     pub fn comprehension(&self) -> &comprehension::Suite<L> {
         &self.comprehension
     }
 
+    /// Returns a reference to the contained transformation `Suite`.
     pub fn transformation(&self) -> &transformation::Suite<L> {
         &self.transformation
     }
 
+    /// Returns a reference to the contained traversal `Suite`.
     pub fn traversal(&self) -> &traversal::Suite<L> {
         &self.traversal
     }

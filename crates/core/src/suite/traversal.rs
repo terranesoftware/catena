@@ -7,10 +7,12 @@ pub struct Suite<T: Traversal> {
 }
 
 impl<T: Traversal> Suite<T> {
+    /// Returns a reference to the contained grammar entity.
     pub fn grammar(&self) -> &T::Grammar {
         &self.grammar
     }
 
+    /// Returns a reference to the contained index entities.
     pub fn indexes(&self) -> &[T::Index] {
         &self.indexes
     }
