@@ -4,7 +4,7 @@ use grammar::RustGrammar;
 mod index;
 use index::RustIndex;
 
-use catena_core::traits::Traversal;
+use catena_suite::traits::Traversal;
 
 use crate::formal::Rust;
 

@@ -6,20 +6,20 @@ version = 4
 name = "catena"
 version = "0.1.0"
 dependencies = [
- "catena-core",
+ "catena-suite",
 ]
-
-[[package]]
-name = "catena-core"
-version = "0.1.0"
 
 [[package]]
 name = "catena-languages"
 version = "0.1.0"
 dependencies = [
- "catena-core",
+ "catena-suite",
 ]
 
 [[package]]
 name = "catena-recognizer"
+version = "0.1.0"
+
+[[package]]
+name = "catena-suite"
 version = "0.1.0"

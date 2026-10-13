@@ -1,4 +1,4 @@
-use catena_core::traits::traversal::Grammar;
+use catena_suite::traits::traversal::Grammar;
 
 pub struct PythonGrammar;
 

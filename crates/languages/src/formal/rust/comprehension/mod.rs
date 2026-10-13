@@ -7,7 +7,7 @@ use diagnostic::RustDiagnostic;
 mod highlight;
 use highlight::RustHighlight;
 
-use catena_core::traits::Comprehension;
+use catena_suite::traits::Comprehension;
 
 use crate::formal::Rust;
 

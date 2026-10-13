@@ -1,4 +1,4 @@
-use catena_core::traits::comprehension::Highlight;
+use catena_suite::traits::comprehension::Highlight;
 
 pub struct JapaneseHighlight;
 

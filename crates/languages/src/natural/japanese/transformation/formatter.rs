@@ -1,4 +1,4 @@
-use catena_core::traits::transformation::Formatter;
+use catena_suite::traits::transformation::Formatter;
 
 pub struct JapaneseFormatter;
 

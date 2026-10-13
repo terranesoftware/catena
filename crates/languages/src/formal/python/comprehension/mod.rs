@@ -7,7 +7,7 @@ use diagnostic::PythonDiagnostic;
 mod highlight;
 use highlight::PythonHighlight;
 
-use catena_core::traits::Comprehension;
+use catena_suite::traits::Comprehension;
 
 use crate::formal::Python;
 

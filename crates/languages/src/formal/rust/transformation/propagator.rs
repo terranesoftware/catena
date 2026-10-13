@@ -1,4 +1,4 @@
-use catena_core::traits::transformation::Propagator;
+use catena_suite::traits::transformation::Propagator;
 
 pub struct RustPropagator;
 

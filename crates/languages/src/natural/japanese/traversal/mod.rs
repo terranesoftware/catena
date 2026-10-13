@@ -4,7 +4,7 @@ use grammar::JapaneseGrammar;
 mod index;
 use index::JapaneseIndex;
 
-use catena_core::traits::Traversal;
+use catena_suite::traits::Traversal;
 
 use crate::natural::Japanese;
 

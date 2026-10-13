@@ -10,7 +10,7 @@ use propagator::EnglishPropagator;
 mod suggestion;
 use suggestion::EnglishSuggestion;
 
-use catena_core::traits::Transformation;
+use catena_suite::traits::Transformation;
 
 use crate::natural::English;
 

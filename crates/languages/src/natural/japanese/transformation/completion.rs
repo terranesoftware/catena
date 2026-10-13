@@ -1,4 +1,4 @@
-use catena_core::traits::transformation::Completion;
+use catena_suite::traits::transformation::Completion;
 
 pub struct JapaneseCompletion;
 

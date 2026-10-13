@@ -1,4 +1,4 @@
-use catena_core::traits::transformation::Suggestion;
+use catena_suite::traits::transformation::Suggestion;
 
 pub struct PythonSuggestion;
 

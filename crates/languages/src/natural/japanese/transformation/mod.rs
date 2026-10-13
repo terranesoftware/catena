@@ -10,7 +10,7 @@ use propagator::JapanesePropagator;
 mod suggestion;
 use suggestion::JapaneseSuggestion;
 
-use catena_core::traits::Transformation;
+use catena_suite::traits::Transformation;
 
 use crate::natural::Japanese;
 

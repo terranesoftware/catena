@@ -10,7 +10,7 @@ use propagator::RustPropagator;
 mod suggestion;
 use suggestion::RustSuggestion;
 
-use catena_core::traits::Transformation;
+use catena_suite::traits::Transformation;
 
 use crate::formal::Rust;
 

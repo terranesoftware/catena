@@ -10,7 +10,7 @@ use propagator::PythonPropagator;
 mod suggestion;
 use suggestion::PythonSuggestion;
 
-use catena_core::traits::Transformation;
+use catena_suite::traits::Transformation;
 
 use crate::formal::Python;
 

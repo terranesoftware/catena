@@ -1,4 +1,4 @@
-use catena_core::traits::comprehension::Description;
+use catena_suite::traits::comprehension::Description;
 
 pub struct JapaneseDescription;
 

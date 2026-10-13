@@ -1,4 +1,4 @@
-use catena_core::traits::comprehension::Diagnostic;
+use catena_suite::traits::comprehension::Diagnostic;
 
 pub struct RustDiagnostic;
 

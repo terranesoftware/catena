@@ -1,4 +1,4 @@
-use catena_core::traits::traversal::Index;
+use catena_suite::traits::traversal::Index;
 
 pub struct EnglishIndex;
 

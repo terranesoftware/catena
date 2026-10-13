@@ -2,7 +2,7 @@ mod comprehension;
 mod transformation;
 mod traversal;
 
-use catena_core::Language;
+use catena_suite::Language;
 
 pub struct Rust;
 
