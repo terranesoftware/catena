@@ -1,6 +1,6 @@
-mod comprehension;
-mod transformation;
-mod traversal;
+pub mod comprehension;
+pub mod transformation;
+pub mod traversal;
 
 use crate::Language;
 

@@ -5,6 +5,9 @@ version = 4
 [[package]]
 name = "catena"
 version = "0.1.0"
+dependencies = [
+ "catena-core",
+]
 
 [[package]]
 name = "catena-core"
