@@ -1,4 +1,4 @@
-use catena_suite::traits::transformation::Completions;
+use catena_suite::traits::transformation::{Completions, Edit};
 
 pub struct PythonCompletions;
 
@@ -7,7 +7,7 @@ impl Completions for PythonCompletions {
         &self,
         at: usize,
         text: &[u8]
-    ) {
-        
+    ) -> Vec<Edit> {
+        Vec::new()
     }
 }

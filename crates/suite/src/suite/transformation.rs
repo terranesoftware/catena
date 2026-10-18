@@ -1,4 +1,4 @@
-use crate::traits::{Transformation, transformation::{Completions, Formatter, Propagator, Suggestions}};
+use crate::traits::{Transformation, transformation::{Completions, Edit, Formatter, Propagator, Suggestions}};
 
 /// Entities that contribute to the manipulation of a language.
 pub struct Suite<T: Transformation> {
@@ -13,28 +13,28 @@ impl<T: Transformation> Suite<T> {
         &self,
         at: usize,
         text: &[u8]
-    ) {
-        self.completions.completions(at, text);
+    ) -> Vec<Edit> {
+        self.completions.completions(at, text)
     }
 
     pub fn formatter(
         &self,
         text: &[u8]
-    ) {
-        self.formatter.formatter(text);
+    ) -> Vec<Edit> {
+        self.formatter.formatter(text)
     }
 
     pub fn propagator(
         &self,
         text: &[u8]
-    ) {
-        self.propagator.propagator(text);
+    ) -> Vec<Edit> {
+        self.propagator.propagator(text)
     }
 
     pub fn suggestions(
         &self,
         text: &[u8]
-    ) {
-        self.suggestions.suggestions(text);
+    ) -> Vec<Edit> {
+        self.suggestions.suggestions(text)
     }
 }

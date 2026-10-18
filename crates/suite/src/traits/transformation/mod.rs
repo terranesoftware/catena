@@ -1,14 +1,8 @@
-mod completions;
-pub use completions::Completions;
+mod edit;
+pub use edit::Edit;
 
-mod formatter;
-pub use formatter::Formatter;
-
-mod propagator;
-pub use propagator::Propagator;
-
-mod suggestions;
-pub use suggestions::Suggestions;
+mod traits;
+pub use traits::{Completions, Formatter, Propagator, Suggestions};
 
 pub trait Transformation {
     type Completions: Completions;
