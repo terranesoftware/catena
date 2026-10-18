@@ -1,3 +1,6 @@
 pub trait Highlights {
-    fn highlights(&self);
+    fn highlights(
+        &self,
+        text: &[u8]
+    );
 }

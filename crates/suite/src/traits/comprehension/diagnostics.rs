@@ -1,3 +1,6 @@
 pub trait Diagnostics {
-    fn diagnostics(&self);
+    fn diagnostics(
+        &self,
+        text: &[u8]
+    );
 }

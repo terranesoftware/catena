@@ -1,3 +1,6 @@
 pub trait Index {
-    fn index(&self);
+    fn index(
+        &self,
+        text: &[u8]
+    );
 }

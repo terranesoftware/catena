@@ -1,3 +1,6 @@
 pub trait Formatter {
-    fn formatter(&self);
+    fn formatter(
+        &self,
+        text: &[u8]
+    );
 }

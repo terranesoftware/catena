@@ -1,3 +1,6 @@
 pub trait Descriptions {
-    fn descriptions(&self);
+    fn descriptions(
+        &self,
+        text: &[u8]
+    );
 }

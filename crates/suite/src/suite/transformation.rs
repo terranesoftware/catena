@@ -9,19 +9,32 @@ pub struct Suite<T: Transformation> {
 }
 
 impl<T: Transformation> Suite<T> {
-    pub fn completions(&self) {
-        self.completions.completions();
+    pub fn completions(
+        &self,
+        at: usize,
+        text: &[u8]
+    ) {
+        self.completions.completions(at, text);
     }
 
-    pub fn formatter(&self) {
-        self.formatter.formatter();
+    pub fn formatter(
+        &self,
+        text: &[u8]
+    ) {
+        self.formatter.formatter(text);
     }
 
-    pub fn propagator(&self) {
-        self.propagator.propagator();
+    pub fn propagator(
+        &self,
+        text: &[u8]
+    ) {
+        self.propagator.propagator(text);
     }
 
-    pub fn suggestions(&self) {
-        self.suggestions.suggestions();
+    pub fn suggestions(
+        &self,
+        text: &[u8]
+    ) {
+        self.suggestions.suggestions(text);
     }
 }

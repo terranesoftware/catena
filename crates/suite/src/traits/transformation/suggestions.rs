@@ -1,3 +1,6 @@
 pub trait Suggestions {
-    fn suggestions(&self);
+    fn suggestions(
+        &self,
+        text: &[u8]
+    );
 }

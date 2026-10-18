@@ -7,11 +7,17 @@ pub struct Suite<T: Traversal> {
 }
 
 impl<T: Traversal> Suite<T> {
-    pub fn grammar(&self) {
-        self.grammar.grammar();
+    pub fn grammar(
+        &self,
+        text: &[u8]
+    ) {
+        self.grammar.grammar(text);
     }
 
-    pub fn index(&self) {
-        self.index.index();
+    pub fn index(
+        &self,
+        text: &[u8]
+    ) {
+        self.index.index(text);
     }
 }

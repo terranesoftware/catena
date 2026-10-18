@@ -1,3 +1,6 @@
 pub trait Grammar {
-    fn grammar(&self);
+    fn grammar(
+        &self,
+       text: &[u8]
+    );
 }

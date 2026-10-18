@@ -8,15 +8,24 @@ pub struct Suite<C: Comprehension> {
 }
 
 impl<C: Comprehension> Suite<C> {
-    pub fn descriptions(&self) {
-        self.descriptions.descriptions();
+    pub fn descriptions(
+        &self,
+        text: &[u8]
+    ) {
+        self.descriptions.descriptions(text);
     }
 
-    pub fn diagnostics(&self) {
-        self.diagnostics.diagnostics();
+    pub fn diagnostics(
+        &self,
+        text: &[u8]
+    ) {
+        self.diagnostics.diagnostics(text);
     }
 
-    pub fn highlights(&self) {
-        self.highlights.highlights();
+    pub fn highlights(
+        &self,
+        text: &[u8]
+    ) {
+        self.highlights.highlights(text);
     }
 }

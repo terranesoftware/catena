@@ -1,3 +1,6 @@
 pub trait Propagator {
-    fn propagator(&self);
+    fn propagator(
+        &self,
+        text: &[u8]
+    );
 }

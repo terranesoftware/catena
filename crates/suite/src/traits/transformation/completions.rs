@@ -1,3 +1,7 @@
 pub trait Completions {
-    fn completions(&self);
+    fn completions(
+        &self,
+        at: usize,
+        text: &[u8]
+    );
 }
