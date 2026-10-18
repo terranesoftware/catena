@@ -1,8 +1,5 @@
-mod grammar;
-pub use grammar::Grammar;
-
-mod index;
-pub use index::Index;
+mod traits;
+pub use traits::{Grammar, Index};
 
 pub trait Traversal {
     type Grammar: Grammar;
