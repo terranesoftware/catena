@@ -1,4 +1,4 @@
-use crate::traits::Transformation;
+use crate::traits::{Transformation, transformation::{Completions, Formatter, Propagator, Suggestions}};
 
 /// Entities that contribute to the manipulation of a language.
 pub struct Suite<T: Transformation> {
@@ -9,23 +9,19 @@ pub struct Suite<T: Transformation> {
 }
 
 impl<T: Transformation> Suite<T> {
-    /// Returns a reference to the contained `Completions` entity.
-    pub fn completions(&self) -> &T::Completions {
-        &self.completions
+    pub fn completions(&self) {
+        self.completions.completions();
     }
 
-    /// Returns a reference to the contained `Formatter` entity.
-    pub fn formatter(&self) -> &T::Formatter {
-        &self.formatter
+    pub fn formatter(&self) {
+        self.formatter.formatter();
     }
 
-    /// Returns a reference to the contained `Propagator` entity.
-    pub fn propagator(&self) -> &T::Propagator {
-        &self.propagator
+    pub fn propagator(&self) {
+        self.propagator.propagator();
     }
 
-    /// Returns a reference to the contained `Suggestions` entity.
-    pub fn suggestions(&self) -> &T::Suggestions {
-        &self.suggestions
+    pub fn suggestions(&self) {
+        self.suggestions.suggestions();
     }
 }

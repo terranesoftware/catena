@@ -1,4 +1,4 @@
-use crate::traits::Comprehension;
+use crate::traits::{Comprehension, comprehension::{Descriptions, Diagnostics, Highlights}};
 
 /// Entities that contribute to the understanding of a language.
 pub struct Suite<C: Comprehension> {
@@ -8,18 +8,15 @@ pub struct Suite<C: Comprehension> {
 }
 
 impl<C: Comprehension> Suite<C> {
-    /// Returns the a reference to the contained `Descriptions` entity.
-    pub fn descriptions(&self) -> &C::Descriptions {
-        &self.descriptions
+    pub fn descriptions(&self) {
+        self.descriptions.descriptions();
     }
 
-    /// Returns a reference to the contained `Diagnostics` entity.
-    pub fn diagnostics(&self) -> &C::Diagnostics {
-        &self.diagnostics
+    pub fn diagnostics(&self) {
+        self.diagnostics.diagnostics();
     }
 
-    /// Returns a reference to the contained `Highlights` entity.
-    pub fn highlights(&self) -> &C::Highlights {
-        &self.highlights
+    pub fn highlights(&self) {
+        self.highlights.highlights();
     }
 }

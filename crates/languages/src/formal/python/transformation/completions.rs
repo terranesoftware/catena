@@ -2,4 +2,8 @@ use catena_suite::traits::transformation::Completions;
 
 pub struct PythonCompletions;
 
-impl Completions for PythonCompletions {}
+impl Completions for PythonCompletions {
+    fn completions(&self) {
+        
+    }
+}

@@ -1,4 +1,4 @@
-use crate::traits::Traversal;
+use crate::traits::{Traversal, traversal::{Grammar, Index}};
 
 /// Entities that contribute to the navigation of a language.
 pub struct Suite<T: Traversal> {
@@ -7,13 +7,11 @@ pub struct Suite<T: Traversal> {
 }
 
 impl<T: Traversal> Suite<T> {
-    /// Returns a reference to the contained `Grammar` entity.
-    pub fn grammar(&self) -> &T::Grammar {
-        &self.grammar
+    pub fn grammar(&self) {
+        self.grammar.grammar();
     }
 
-    /// Returns a reference to the contained `Index` entity.
-    pub fn index(&self) -> &T::Index {
-        &self.index
+    pub fn index(&self) {
+        self.index.index();
     }
 }
