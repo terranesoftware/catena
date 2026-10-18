@@ -1,10 +1,9 @@
-use crate::traits::{Comprehension, comprehension::{Descriptions, Diagnostics, Highlights}};
+use crate::traits::{Comprehension, comprehension::{Descriptions, Diagnostics}};
 
 /// Entities that contribute to the understanding of a language.
 pub struct Suite<C: Comprehension> {
     descriptions: C::Descriptions,
-    diagnostics: C::Diagnostics,
-    highlights: C::Highlights
+    diagnostics: C::Diagnostics
 }
 
 impl<C: Comprehension> Suite<C> {
@@ -20,12 +19,5 @@ impl<C: Comprehension> Suite<C> {
         text: &[u8]
     ) {
         self.diagnostics.diagnostics(text);
-    }
-
-    pub fn highlights(
-        &self,
-        text: &[u8]
-    ) {
-        self.highlights.highlights(text);
     }
 }
