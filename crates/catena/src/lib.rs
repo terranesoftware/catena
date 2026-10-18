@@ -6,7 +6,7 @@ pub mod suite {
         pub use catena_suite::traits::Comprehension;
     
         pub mod inner {
-            pub use catena_suite::traits::comprehension::{Description, Diagnostic, Highlight};
+            pub use catena_suite::traits::comprehension::{Descriptions, Diagnostics, Highlights};
         }
     }
     
@@ -15,7 +15,7 @@ pub mod suite {
         pub use catena_suite::traits::Transformation;
     
         pub mod inner {
-            pub use catena_suite::traits::transformation::{Completion, Formatter, Propagator, Suggestion};
+            pub use catena_suite::traits::transformation::{Completions, Formatter, Propagator, Suggestions};
         }
     }
     

@@ -3,17 +3,17 @@ use crate::traits::Traversal;
 /// Entities that contribute to the navigation of a language.
 pub struct Suite<T: Traversal> {
     grammar: T::Grammar,
-    indexes: Vec<T::Index>
+    index: T::Index
 }
 
 impl<T: Traversal> Suite<T> {
-    /// Returns a reference to the contained grammar entity.
+    /// Returns a reference to the contained `Grammar` entity.
     pub fn grammar(&self) -> &T::Grammar {
         &self.grammar
     }
 
-    /// Returns a reference to the contained index entities.
-    pub fn indexes(&self) -> &[T::Index] {
-        &self.indexes
+    /// Returns a reference to the contained `Index` entity.
+    pub fn index(&self) -> &T::Index {
+        &self.index
     }
 }

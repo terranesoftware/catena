@@ -1,14 +1,14 @@
-mod description;
-pub use description::Description;
+mod descriptions;
+pub use descriptions::Descriptions;
 
-mod diagnostic;
-pub use diagnostic::Diagnostic;
+mod diagnostics;
+pub use diagnostics::Diagnostics;
 
-mod highlight;
-pub use highlight::Highlight;
+mod highlights;
+pub use highlights::Highlights;
 
 pub trait Comprehension {
-    type Description: Description;
-    type Diagnostic: Diagnostic;
-    type Highlight: Highlight;
+    type Descriptions: Descriptions;
+    type Diagnostics: Diagnostics;
+    type Highlights: Highlights;
 }

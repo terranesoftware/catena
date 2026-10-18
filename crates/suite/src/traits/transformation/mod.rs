@@ -1,5 +1,5 @@
-mod completion;
-pub use completion::Completion;
+mod completions;
+pub use completions::Completions;
 
 mod formatter;
 pub use formatter::Formatter;
@@ -7,12 +7,12 @@ pub use formatter::Formatter;
 mod propagator;
 pub use propagator::Propagator;
 
-mod suggestion;
-pub use suggestion::Suggestion;
+mod suggestions;
+pub use suggestions::Suggestions;
 
 pub trait Transformation {
-    type Completion: Completion;
+    type Completions: Completions;
     type Formatter: Formatter;
     type Propagator: Propagator;
-    type Suggestion: Suggestion;
+    type Suggestions: Suggestions;
 }

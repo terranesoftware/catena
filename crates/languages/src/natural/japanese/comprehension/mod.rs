@@ -1,18 +1,18 @@
-mod description;
-use description::JapaneseDescription;
+mod descriptions;
+use descriptions::JapaneseDescriptions;
 
-mod diagnostic;
-use diagnostic::JapaneseDiagnostic;
+mod diagnostics;
+use diagnostics::JapaneseDiagnostics;
 
-mod highlight;
-use highlight::JapaneseHighlight;
+mod highlights;
+use highlights::JapaneseHighlights;
 
 use catena_suite::traits::Comprehension;
 
 use crate::natural::Japanese;
 
 impl Comprehension for Japanese {
-    type Description = JapaneseDescription;
-    type Diagnostic = JapaneseDiagnostic;
-    type Highlight = JapaneseHighlight;
+    type Descriptions = JapaneseDescriptions;
+    type Diagnostics = JapaneseDiagnostics;
+    type Highlights = JapaneseHighlights;
 }

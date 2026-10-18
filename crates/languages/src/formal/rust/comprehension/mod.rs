@@ -1,18 +1,18 @@
-mod description;
-use description::RustDescription;
+mod descriptions;
+use descriptions::RustDescriptions;
 
-mod diagnostic;
-use diagnostic::RustDiagnostic;
+mod diagnostics;
+use diagnostics::RustDiagnostics;
 
-mod highlight;
-use highlight::RustHighlight;
+mod highlights;
+use highlights::RustHighlights;
 
 use catena_suite::traits::Comprehension;
 
 use crate::formal::Rust;
 
 impl Comprehension for Rust {
-    type Description = RustDescription;
-    type Diagnostic = RustDiagnostic;
-    type Highlight = RustHighlight;
+    type Descriptions = RustDescriptions;
+    type Diagnostics = RustDiagnostics;
+    type Highlights = RustHighlights;
 }

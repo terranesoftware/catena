@@ -1,18 +1,18 @@
-mod description;
-use description::PythonDescription;
+mod descriptions;
+use descriptions::PythonDescriptions;
 
-mod diagnostic;
-use diagnostic::PythonDiagnostic;
+mod diagnostics;
+use diagnostics::PythonDiagnostics;
 
-mod highlight;
-use highlight::PythonHighlight;
+mod highlights;
+use highlights::PythonHighlights;
 
 use catena_suite::traits::Comprehension;
 
 use crate::formal::Python;
 
 impl Comprehension for Python {
-    type Description = PythonDescription;
-    type Diagnostic = PythonDiagnostic;
-    type Highlight = PythonHighlight;
+    type Descriptions = PythonDescriptions;
+    type Diagnostics = PythonDiagnostics;
+    type Highlights = PythonHighlights;
 }
