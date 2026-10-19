@@ -1,5 +1,5 @@
-mod grammar;
-pub use grammar::Grammar;
+mod segmenter;
+pub use segmenter::Segmenter;
 
-mod index;
-pub use index::Index;
+mod indexer;
+pub use indexer::Indexer;

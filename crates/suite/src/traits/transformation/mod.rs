@@ -1,12 +1,21 @@
+mod completer;
+pub use completer::Completer;
+
 mod edit;
 pub use edit::Edit;
 
-mod traits;
-pub use traits::{Completions, Formatter, Propagator, Suggestions};
+mod formatter;
+pub use formatter::Formatter;
+
+mod propagator;
+pub use propagator::Propagator;
+
+mod suggester;
+pub use suggester::Suggester;
 
 pub trait Transformation {
-    type Completions: Completions;
+    type Completer: Completer;
     type Formatter: Formatter;
     type Propagator: Propagator;
-    type Suggestions: Suggestions;
+    type Suggester: Suggester;
 }

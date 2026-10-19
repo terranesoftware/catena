@@ -1,9 +1,8 @@
 use crate::traits::transformation::edit::Edit;
 
-pub trait Completions {
-    fn completions(
+pub trait Propagator {
+    fn propagate(
         &self,
-        at: usize,
         text: &[u8]
     ) -> Vec<Edit>;
 }

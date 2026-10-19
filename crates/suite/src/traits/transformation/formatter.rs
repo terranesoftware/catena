@@ -1,7 +1,7 @@
 use crate::traits::transformation::edit::Edit;
 
 pub trait Formatter {
-    fn formatter(
+    fn format(
         &self,
         text: &[u8]
     ) -> Vec<Edit>;

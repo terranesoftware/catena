@@ -1,10 +1,10 @@
-mod descriptions;
-pub use descriptions::Descriptions;
+pub mod descriptor;
+pub use descriptor::Descriptor;
 
-mod diagnostics;
-pub use diagnostics::Diagnostics;
+pub mod diagnoser;
+pub use diagnoser::Diagnoser;
 
 pub trait Comprehension {
-    type Descriptions: Descriptions;
-    type Diagnostics: Diagnostics;
+    type Descriptor: Descriptor;
+    type Diagnoser: Diagnoser;
 }

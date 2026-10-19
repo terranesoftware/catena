@@ -1,7 +1,7 @@
 mod traits;
-pub use traits::{Grammar, Index};
+pub use traits::{Indexer, Segmenter};
 
 pub trait Traversal {
-    type Grammar: Grammar;
-    type Index: Index;
+    type Indexer: Indexer;
+    type Segmenter: Segmenter;
 }

@@ -1,6 +1,6 @@
 use std::range::Range;
 
-pub trait Index {
+pub trait Indexer {
     fn index(
         &self,
         text: &[u8]
