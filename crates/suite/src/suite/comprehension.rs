@@ -1,4 +1,4 @@
-use crate::traits::{Comprehension, comprehension::{Descriptor, Diagnoser}};
+use crate::traits::{Comprehension, comprehension::{Descriptor, Diagnoser, descriptor::Description, diagnoser::Diagnostic}};
 
 /// Entities that contribute to the understanding of a language.
 pub struct Suite<C: Comprehension> {
@@ -7,17 +7,19 @@ pub struct Suite<C: Comprehension> {
 }
 
 impl<C: Comprehension> Suite<C> {
+    /// Describes the supplied text.
     pub fn describe(
         &self,
         text: &[u8]
-    ) {
-        self.descriptor.describe(text);
+    ) -> Description {
+        self.descriptor.describe(text)
     }
 
+    /// Diagnoses the supplied text.
     pub fn diagnose(
         &self,
         text: &[u8]
-    ) {
-        self.diagnoser.diagnose(text);
+    ) -> Vec<Diagnostic> {
+        self.diagnoser.diagnose(text)
     }
 }

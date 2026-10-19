@@ -9,6 +9,7 @@ pub struct Suite<T: Traversal> {
 }
 
 impl<T: Traversal> Suite<T> {
+    /// Indexes the supplied text.
     pub fn index(
         &self,
         text: &[u8]
@@ -16,6 +17,7 @@ impl<T: Traversal> Suite<T> {
         self.indexer.index(text)
     }
 
+    /// Segments the supplied text.
     pub fn segment(
         &self,
         text: &[u8]
