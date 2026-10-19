@@ -6,7 +6,19 @@ pub mod suite {
         pub use catena_suite::traits::Comprehension;
     
         pub mod inner {
-            pub use catena_suite::traits::comprehension::{Descriptions, Diagnostics};
+            pub use catena_suite::traits::comprehension::{Descriptor, Diagnoser};
+
+            pub mod descriptor {
+                pub use catena_suite::traits::comprehension::descriptor::Description;
+            }
+
+            pub mod diagnoser {
+                pub use catena_suite::traits::comprehension::diagnoser::Diagnostic;
+
+                pub mod diagnostic {
+                    pub use catena_suite::traits::comprehension::diagnoser::diagnostic::Severity;
+                }
+            }
         }
     }
     
@@ -15,7 +27,7 @@ pub mod suite {
         pub use catena_suite::traits::Transformation;
     
         pub mod inner {
-            pub use catena_suite::traits::transformation::{Completions, Formatter, Propagator, Suggestions};
+            pub use catena_suite::traits::transformation::{Completer, Edit, Formatter, Propagator, Suggester};
         }
     }
     
@@ -24,7 +36,7 @@ pub mod suite {
         pub use catena_suite::traits::Traversal;
     
         pub mod inner {
-            pub use catena_suite::traits::traversal::{Grammar, Index};
+            pub use catena_suite::traits::traversal::{Indexer, Segmenter};
         }
     }
 }
