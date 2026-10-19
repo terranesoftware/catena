@@ -1,5 +1,5 @@
-mod completions;
-use completions::PythonCompletions;
+mod completer;
+use completer::PythonCompleter;
 
 mod formatter;
 use formatter::PythonFormatter;
@@ -7,16 +7,16 @@ use formatter::PythonFormatter;
 mod propagator;
 use propagator::PythonPropagator;
 
-mod suggestions;
-use suggestions::PythonSuggestions;
+mod suggester;
+use suggester::PythonSuggester;
 
 use catena_suite::traits::Transformation;
 
 use crate::formal::Python;
 
 impl Transformation for Python {
-    type Completions = PythonCompletions;
+    type Completer = PythonCompleter;
     type Formatter = PythonFormatter;
     type Propagator = PythonPropagator;
-    type Suggestions = PythonSuggestions;
+    type Suggester = PythonSuggester;
 }

@@ -1,14 +1,14 @@
-mod descriptions;
-use descriptions::PythonDescriptions;
+mod descriptor;
+use descriptor::PythonDescriptor;
 
-mod diagnostics;
-use diagnostics::PythonDiagnostics;
+mod diagnoser;
+use diagnoser::PythonDiagnoser;
 
 use catena_suite::traits::Comprehension;
 
 use crate::formal::Python;
 
 impl Comprehension for Python {
-    type Descriptions = PythonDescriptions;
-    type Diagnostics = PythonDiagnostics;
+    type Descriptor = PythonDescriptor;
+    type Diagnoser = PythonDiagnoser;
 }

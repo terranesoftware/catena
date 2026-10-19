@@ -1,10 +1,10 @@
 use std::range::Range;
 
-use catena_suite::traits::traversal::Index;
+use catena_suite::traits::traversal::Indexer;
 
-pub struct PythonIndex;
+pub struct PythonIndexer;
 
-impl Index for PythonIndex {
+impl Indexer for PythonIndexer {
     fn index(
         &self,
         text: &[u8]

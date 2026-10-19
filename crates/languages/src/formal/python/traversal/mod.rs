@@ -1,14 +1,14 @@
-mod grammar;
-use grammar::PythonGrammar;
+mod indexer;
+use indexer::PythonIndexer;
 
-mod index;
-use index::PythonIndex;
+mod segmenter;
+use segmenter::PythonSegmenter;
 
 use catena_suite::traits::Traversal;
 
 use crate::formal::Python;
 
 impl Traversal for Python {
-    type Grammar = PythonGrammar;
-    type Index = PythonIndex;
+    type Indexer = PythonIndexer;
+    type Segmenter = PythonSegmenter;
 }

@@ -1,14 +1,14 @@
-mod descriptions;
-use descriptions::RustDescriptions;
+mod descriptor;
+use descriptor::RustDescriptor;
 
-mod diagnostics;
-use diagnostics::RustDiagnostics;
+mod diagnoser;
+use diagnoser::RustDiagnoser;
 
 use catena_suite::traits::Comprehension;
 
 use crate::formal::Rust;
 
 impl Comprehension for Rust {
-    type Descriptions = RustDescriptions;
-    type Diagnostics = RustDiagnostics;
+    type Descriptor = RustDescriptor;
+    type Diagnoser = RustDiagnoser;
 }
