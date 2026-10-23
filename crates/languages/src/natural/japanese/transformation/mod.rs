@@ -1,5 +1,5 @@
-mod completions;
-use completions::JapaneseCompletions;
+mod completer;
+use completer::JapaneseCompleter;
 
 mod formatter;
 use formatter::JapaneseFormatter;
@@ -7,16 +7,16 @@ use formatter::JapaneseFormatter;
 mod propagator;
 use propagator::JapanesePropagator;
 
-mod suggestions;
-use suggestions::JapaneseSuggestions;
+mod suggester;
+use suggester::JapaneseSuggester;
 
 use catena_suite::traits::Transformation;
 
 use crate::natural::Japanese;
 
 impl Transformation for Japanese {
-    type Completions = JapaneseCompletions;
+    type Completer = JapaneseCompleter;
     type Formatter = JapaneseFormatter;
     type Propagator = JapanesePropagator;
-    type Suggestions = JapaneseSuggestions;
+    type Suggester = JapaneseSuggester;
 }
