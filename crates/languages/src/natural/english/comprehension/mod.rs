@@ -1,14 +1,14 @@
-mod descriptions;
-use descriptions::EnglishDescriptions;
+mod descriptor;
+use descriptor::EnglishDescriptor;
 
-mod diagnostics;
-use diagnostics::EnglishDiagnostics;
+mod diagnoser;
+use diagnoser::EnglishDiagnoser;
 
 use catena_suite::traits::Comprehension;
 
 use crate::natural::English;
 
 impl Comprehension for English {
-    type Descriptions = EnglishDescriptions;
-    type Diagnostics = EnglishDiagnostics;
+    type Descriptor = EnglishDescriptor;
+    type Diagnoser = EnglishDiagnoser;
 }
