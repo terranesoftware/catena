@@ -1,14 +1,14 @@
-mod grammar;
-use grammar::RustGrammar;
+mod indexer;
+use indexer::RustIndexer;
 
-mod index;
-use index::RustIndex;
+mod segmenter;
+use segmenter::RustSegmenter;
 
 use catena_suite::traits::Traversal;
 
 use crate::formal::Rust;
 
 impl Traversal for Rust {
-    type Grammar = RustGrammar;
-    type Index = RustIndex;
+    type Indexer = RustIndexer;
+    type Segmenter = RustSegmenter;
 }

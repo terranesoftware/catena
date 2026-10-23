@@ -1,11 +1,11 @@
 use std::range::Range;
 
-use catena_suite::traits::traversal::Grammar;
+use catena_suite::traits::traversal::Indexer;
 
-pub struct RustGrammar;
+pub struct RustIndexer;
 
-impl Grammar for RustGrammar {
-    fn grammar(
+impl Indexer for RustIndexer {
+    fn index(
         &self,
         text: &[u8]
     ) -> Range<usize> {
