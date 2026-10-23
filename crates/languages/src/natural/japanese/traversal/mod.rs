@@ -1,14 +1,14 @@
-mod grammar;
-use grammar::JapaneseGrammar;
+mod indexer;
+use indexer::JapaneseIndexer;
 
-mod index;
-use index::JapaneseIndex;
+mod segmenter;
+use segmenter::JapaneseSegmenter;
 
 use catena_suite::traits::Traversal;
 
 use crate::natural::Japanese;
 
 impl Traversal for Japanese {
-    type Grammar = JapaneseGrammar;
-    type Index = JapaneseIndex;
+    type Indexer = JapaneseIndexer;
+    type Segmenter = JapaneseSegmenter;
 }
