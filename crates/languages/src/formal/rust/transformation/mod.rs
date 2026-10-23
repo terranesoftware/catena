@@ -1,5 +1,5 @@
-mod completions;
-use completions::RustCompletions;
+mod completer;
+use completer::RustCompleter;
 
 mod formatter;
 use formatter::RustFormatter;
@@ -7,16 +7,16 @@ use formatter::RustFormatter;
 mod propagator;
 use propagator::RustPropagator;
 
-mod suggestions;
-use suggestions::RustSuggestions;
+mod suggester;
+use suggester::RustSuggester;
 
 use catena_suite::traits::Transformation;
 
 use crate::formal::Rust;
 
 impl Transformation for Rust {
-    type Completions = RustCompletions;
+    type Completer = RustCompleter;
     type Formatter = RustFormatter;
     type Propagator = RustPropagator;
-    type Suggestions = RustSuggestions;
+    type Suggester = RustSuggester;
 }
