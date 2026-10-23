@@ -4,5 +4,5 @@ pub trait Indexer {
     fn index(
         &self,
         text: &[u8]
-    ) -> Range<usize>;
+    ) -> Vec<Range<usize>>;
 }

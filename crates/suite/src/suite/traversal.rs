@@ -13,7 +13,7 @@ impl<T: Traversal> Suite<T> {
     pub fn index(
         &self,
         text: &[u8]
-    ) -> Range<usize> {
+    ) -> Vec<Range<usize>> {
         self.indexer.index(text)
     }
 
@@ -21,7 +21,7 @@ impl<T: Traversal> Suite<T> {
     pub fn segment(
         &self,
         text: &[u8]
-    ) -> Range<usize> {
+    ) -> Vec<Range<usize>> {
         self.segmenter.segment(text)
     }
 }

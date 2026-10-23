@@ -8,7 +8,7 @@ impl Indexer for PythonIndexer {
     fn index(
         &self,
         text: &[u8]
-    ) -> Range<usize> {
-        Range::default()
+    ) -> Vec<Range<usize>> {
+        Vec::new()
     }
 }

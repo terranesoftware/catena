@@ -8,7 +8,7 @@ impl Segmenter for PythonSegmenter {
     fn segment(
         &self,
         text: &[u8]
-    ) -> Range<usize> {
-        Range::default()
+    ) -> Vec<Range<usize>> {
+        Vec::new()
     }
 }
