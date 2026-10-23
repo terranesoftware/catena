@@ -1,5 +1,5 @@
-mod completions;
-use completions::EnglishCompletions;
+mod completer;
+use completer::EnglishCompleter;
 
 mod formatter;
 use formatter::EnglishFormatter;
@@ -7,16 +7,16 @@ use formatter::EnglishFormatter;
 mod propagator;
 use propagator::EnglishPropagator;
 
-mod suggestions;
-use suggestions::EnglishSuggestions;
+mod suggester;
+use suggester::EnglishSuggester;
 
 use catena_suite::traits::Transformation;
 
 use crate::natural::English;
 
 impl Transformation for English {
-    type Completions = EnglishCompletions;
+    type Completer = EnglishCompleter;
     type Formatter = EnglishFormatter;
     type Propagator = EnglishPropagator;
-    type Suggestions = EnglishSuggestions;
+    type Suggester = EnglishSuggester;
 }
