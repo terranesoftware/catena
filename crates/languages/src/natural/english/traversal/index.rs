@@ -1,10 +1,10 @@
 use std::range::Range;
 
-use catena_suite::traits::traversal::Index;
+use catena_suite::traits::traversal::Indexer;
 
-pub struct EnglishIndex;
+pub struct EnglishIndexer;
 
-impl Index for EnglishIndex {
+impl Indexer for EnglishIndexer {
     fn index(
         &self,
         text: &[u8]

@@ -1,14 +1,14 @@
-mod grammar;
-use grammar::EnglishGrammar;
-
 mod index;
-use index::EnglishIndex;
+use index::EnglishIndexer;
+
+mod segmenter;
+use segmenter::EnglishSegmenter;
 
 use catena_suite::traits::Traversal;
 
 use crate::natural::English;
 
 impl Traversal for English {
-    type Grammar = EnglishGrammar;
-    type Index = EnglishIndex;
+    type Indexer = EnglishIndexer;
+    type Segmenter = EnglishSegmenter;
 }
